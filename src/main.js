@@ -9,12 +9,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCexj9Sh8BureDFRgCdAcNMiBE63wjdHVU",
-  authDomain: "auth-vue-ef86a.firebaseapp.com",
-  projectId: "auth-vue-ef86a",
-  storageBucket: "auth-vue-ef86a.appspot.com",
-  messagingSenderId: "223797929256",
-  appId: "1:223797929256:web:a9fbe309d9467003b21c1d"
+  apiKey: "XXX",
+  authDomain: "XXX",
+  databaseURL: "XXX",
+  projectId: "XXX",
+  storageBucket: "XXX",
+  messagingSenderId: "XXX",
+  appId: "XXX"
 };
 
 initializeApp(firebaseConfig);

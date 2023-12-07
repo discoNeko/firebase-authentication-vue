@@ -25,6 +25,8 @@ onMounted(() => {
   auth = getAuth()
   onAuthStateChanged(auth, (user) => {
     if (user) {
+      console.log("auth info:")
+      console.log(user)
       isLoggedIn.value = true
     } else {
       isLoggedIn.value = false
@@ -46,9 +48,11 @@ const handleSignOut = () => {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }

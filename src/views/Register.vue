@@ -13,7 +13,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithRedirect
 } from 'firebase/auth'
 import { useRouter } from 'vue-router'
 
@@ -36,14 +36,16 @@ const register = () => {
 
 const signInWithGoogle = () => {
   const provider = new GoogleAuthProvider()
-  signInWithPopup(getAuth(), provider)
-  .then((result) => {
-    console.log(result.user)
-    router.push('/feed')
-  })
-  .catch((error) => {
-    console.error(error)
-  })
+  const googleAuth = getAuth()
+  signInWithRedirect(googleAuth, provider)
+  getRedirectResult(googleAuth)
+    .then((result) => {
+      console.log(result.user)
+      router.push('/feed')
+    })
+    .catch((error) => {
+      console.error(error)
+    })
 }
 
 </script>
